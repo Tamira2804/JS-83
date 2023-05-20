@@ -1,0 +1,89 @@
+/*
+  1. Об'єкти window та document
+
+  Cучасні методи пошуку елементів (querySelector, querySelectorAll)
+
+  Поняття вузлів та їх типи
+
+  Представлення документу як дерева об'єктів
+  
+  Навігація по DOM дереву (children, etc.)
+*/
+
+// const paragraphEl = document.querySelector(".description");
+
+// console.log((paragraphEl.style.color = "red"));
+
+// const listItemsEls = document.querySelectorAll(".list__item");
+
+// console.log(listItemsEls);
+
+// const containerEl = document.querySelector(".container");
+
+// console.dir(containerEl);
+// console.dir(containerEl.lastElementChild);
+// console.dir(containerEl.firstElementChild);
+// console.dir(containerEl.firstElementChild.nextElementSibling);
+// console.dir(containerEl.firstElementChild.parentElement);
+
+/* 
+  2. Доступ до атрибутів у елемента
+
+  elem.attributes
+  elem.hasAttribute(name)
+  elem.getAttribute(name)
+  elem.setAttribute(name, value)
+  elem.removeAttribute(name)
+
+  доступ до атрибуту через .
+
+  show on img with class some-img
+*/
+
+// const imgEl = document.querySelector(".some-img");
+
+// console.log(imgEl.attributes);
+// console.log(imgEl.hasAttribute("title")); //пошук самого атрибуту
+// console.log(imgEl.hasAttribute("checked"));
+// console.log(imgEl.getAttribute("src")); //пошук значення атрибуту
+// imgEl.setAttribute("src", "https://picsum.photos/id/167/200/150"); //зміна значення атрибуту (ім'я атрибуту, його нове значення)
+// imgEl.removeAttribute("src"); // видаляє атрибут
+
+// console.log(imgEl.title);
+
+// imgEl.src = "https://picsum.photos/id/156/200/300";
+
+/*
+  3. Об'єкт style, властивість cssText
+
+  show on heading with class main-title
+*/
+
+// const headingEl = document.querySelector(".main-title");
+
+// headingEl.style.color = "green";
+// headingEl.style.backgroundColor = "red";
+
+// headingEl.style.cssText = "color: green; background-color: red";
+// пишемо декілька властивостей як в css через кому в кебаб кейсі
+// це також інлайн стиль
+
+/*
+  4. Об'єкт classList та його методи (add, remove, toggle, contains)
+  
+
+  take dissapear and red classes from main.css
+*/
+
+// const imgEl = document.querySelector(".some-img");
+
+// console.log(imgEl);
+
+// imgEl.classList.add("dissapear"); //додається класс
+
+// imgEl.classList.remove("dissapear"); видаляється класс
+
+// imgEl.classList.toggle("dissapear"); // перемикає, якщо немає, то додає, якщо є то видаляє
+// imgEl.classList.toggle("dissapear");
+
+// console.log(imgEl.classList.contains("somedasdas-img")); //повертає тру або фолс, тобто перевіряє наявність того чи іншого класу
